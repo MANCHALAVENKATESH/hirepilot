@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@layer components {
+  .card-base {
+    @apply rounded-2xl border border-slate-200 bg-white shadow-md;
+  }
+
+  .muted {
+    @apply text-sm text-slate-500;
+  }
+}

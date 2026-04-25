@@ -1,0 +1,96 @@
+export const priorityActions = [
+  {
+    title: 'Review AI shortlist',
+    subtitle: '26 candidates recommended across 4 roles',
+    count: 'AI',
+    countColor: 'brand',
+    cta: 'Open list',
+  },
+  {
+    title: 'Send assessments',
+    subtitle: 'Pending candidates ready for evaluation',
+    count: '12',
+    countColor: 'success',
+    cta: 'Send now',
+  },
+  {
+    title: 'Proctoring alerts',
+    subtitle: 'Submissions need integrity review',
+    count: '5',
+    countColor: 'warning',
+    cta: 'Review flags',
+  },
+  {
+    title: 'Interviews today',
+    subtitle: '2 require scheduling confirmation',
+    count: '8',
+    countColor: 'danger',
+    cta: 'Open calendar',
+  },
+]
+
+export const jobs = [
+  {
+    role: 'Senior Frontend Engineer',
+    location: 'Bangalore',
+    exp: '4–6 yrs',
+    pipeline: 66,
+    pipelineText: '89 candidates • 14 shortlisted',
+    topMatches: '6 strong',
+    health: 'Healthy',
+    healthColor: 'success',
+    nextAction: 'Review shortlist',
+    button: 'Open role',
+  },
+  {
+    role: 'Backend Developer',
+    location: 'Remote',
+    exp: '3–5 yrs',
+    pipeline: 50,
+    pipelineText: '72 candidates • 8 in assessment',
+    topMatches: '3 strong',
+    health: 'Watch',
+    healthColor: 'warning',
+    nextAction: 'Send reminders',
+    button: 'Notify',
+  },
+  {
+    role: 'Campus Hiring - SDE',
+    location: 'India',
+    exp: '0–1 yrs',
+    pipeline: 40,
+    pipelineText: '340 candidates • high drop-off',
+    topMatches: '12 medium',
+    health: 'Risk',
+    healthColor: 'danger',
+    nextAction: 'Fix assessment flow',
+    button: 'Open analysis',
+  },
+  {
+    role: 'Product Designer',
+    location: 'Hybrid',
+    exp: '3–6 yrs',
+    pipeline: 61,
+    pipelineText: '41 candidates • interview round',
+    topMatches: '4 strong',
+    health: 'On track',
+    healthColor: 'success',
+    nextAction: 'Schedule panel',
+    button: 'Schedule',
+  },
+]
+
+export const topCandidates = [
+  {
+    name: 'Neha Kapoor',
+    role: 'Senior Frontend Engineer',
+    match: '91% match',
+    color: 'success',
+  },
+  {
+    name: 'Aarav Sharma',
+    role: 'Backend Developer',
+    match: '84% match',
+    color: 'warning',
+  },
+]
