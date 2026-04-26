@@ -8,6 +8,8 @@ import SearchBar from '../components/ui/SearchBar'
 import ProgressBar from '../components/ui/ProgressBar'
 import PageHeader from '../components/ui/PageHeader'
 import { jobs, priorityActions, topCandidates } from '../data/dashboardData'
+import { NavLink } from 'react-router-dom'
+
 
 function getProgressFill(role) {
   if (role === 'Backend Developer') return '#E58A00'
@@ -110,12 +112,15 @@ export default function DashboardPage() {
             </AppButton>
 
             <AppButton
+              component={NavLink}
+              to="/createjob"
               sx={{
                 minWidth: 182,
                 height: 58,
                 borderRadius: '18px',
                 fontSize: '1rem',
                 fontWeight: 700,
+                textDecoration: 'none',
               }}
             >
               Create Job
