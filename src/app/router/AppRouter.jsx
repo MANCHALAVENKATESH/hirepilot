@@ -16,6 +16,9 @@ import AnalyticsPage from "../../pages/AnalyticsPage";
 import IntegrationsPage from "../../pages/IntegrationPage";
 import SettingsPage from "../../pages/SettingsPage";
 import ProfilePage from "../../pages/ProfilePage";
+import NonTechnicalInterviewPage from "../../pages/AIInterviewPage";
+import AddCandidatePage from "../../pages/AddCandidatate";
+import CandidateListPage from "../../pages/CandidateListPage";
 
 export default function AppRouter() {
   const token = localStorage.getItem("token");
@@ -25,20 +28,25 @@ export default function AppRouter() {
       {/* Public Routes */}
       <Route
         path="/login"
-        element={
-          token ? <Navigate to="/dashboard" replace /> : <LoginPage />
-        }
+        element={token ? <Navigate to="/dashboard" replace /> : <LoginPage />}
       />
-
+    
       <Route
         path="/signup"
-        element={
-          token ? <Navigate to="/dashboard" replace /> : <SignupPage />
-        }
+        element={token ? <Navigate to="/dashboard" replace /> : <SignupPage />}
       />
 
       {/* Protected Routes */}
       <Route
+        path="/aiinterview"
+        element={
+          <PrivateRoute>
+            <NonTechnicalInterviewPage />
+          </PrivateRoute>
+        }
+      />
+
+         <Route
         path="/dashboard"
         element={
           <PrivateRoute>
@@ -55,6 +63,24 @@ export default function AppRouter() {
           </PrivateRoute>
         }
       />
+        <Route
+        path="/addcandidate"
+        element={
+          <PrivateRoute>
+            <AddCandidatePage />
+          </PrivateRoute>
+        }
+      />
+
+    <Route
+        path="/candidateslist"
+        element={
+          <PrivateRoute>
+            <CandidateListPage />
+          </PrivateRoute>
+        }
+      />
+      
 
       <Route
         path="/pipeline"
@@ -150,9 +176,11 @@ export default function AppRouter() {
       <Route
         path="/"
         element={
-          token
-            ? <Navigate to="/dashboard" replace />
-            : <Navigate to="/login" replace />
+          token ? (
+            <Navigate to="/dashboard" replace />
+          ) : (
+            <Navigate to="/login" replace />
+          )
         }
       />
 
@@ -160,9 +188,11 @@ export default function AppRouter() {
       <Route
         path="*"
         element={
-          token
-            ? <Navigate to="/dashboard" replace />
-            : <Navigate to="/login" replace />
+          token ? (
+            <Navigate to="/dashboard" replace />
+          ) : (
+            <Navigate to="/login" replace />
+          )
         }
       />
     </Routes>
